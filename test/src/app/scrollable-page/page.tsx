@@ -5,13 +5,69 @@ import { Drawer } from 'vaul';
 
 export default function Page() {
   const [open, setOpen] = useState(false);
-  const [parent, setParent] = useState<HTMLDivElement | null>(null);
 
   return (
-    <div className="w-screen h-screen bg-white p-8 flex justify-center items-center" data-vaul-drawer-wrapper="">
-      <div className="w-[50vw] h-[50vh] relative" ref={setParent} />
-      <Drawer.Root open={open} onOpenChange={setOpen} container={parent}>
-        <Drawer.Trigger asChild>
+    <div
+      className="w-screen h-screen bg-white p-8 flex flex-col max-w-sm  justify-center items-center"
+      data-vaul-drawer-wrapper=""
+    >
+      <p>
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
+        faucibus mollis interdum.
+      </p>
+      <p>
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
+        faucibus mollis interdum.
+      </p>
+      <p>
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
+        faucibus mollis interdum.
+      </p>
+      <p>
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
+        faucibus mollis interdum.
+      </p>
+      <p>
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
+        faucibus mollis interdum.
+      </p>
+      <p>
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
+        faucibus mollis interdum.
+      </p>
+      <p>
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
+        faucibus mollis interdum.
+      </p>
+      <p>
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
+        faucibus mollis interdum.
+      </p>
+      <p>
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
+        faucibus mollis interdum.
+      </p>
+      <p>
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
+        faucibus mollis interdum.
+      </p>
+      <p>
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+        et. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas
+        faucibus mollis interdum.
+      </p>
+      <Drawer.Root open={open} onOpenChange={setOpen}>
+        <Drawer.Trigger asChild onClick={() => setOpen(true)}>
           <button data-testid="trigger" className="text-2xl">
             Open Drawer
           </button>
@@ -22,10 +78,6 @@ export default function Page() {
             data-testid="content"
             className="bg-zinc-100 flex flex-col rounded-t-[10px] h-[96%] mt-24 fixed bottom-0 left-0 right-0"
           >
-            <Drawer.Close data-testid="drawer-close">Close</Drawer.Close>
-            <button data-testid="controlled-close" onClick={() => setOpen(false)} className="text-2xl">
-              Close
-            </button>
             <div className="p-4 bg-white rounded-t-[10px] flex-1">
               <div className="mx-auto w-12 h-1.5 flex-shrink-0 rounded-full bg-zinc-300 mb-8" />
               <div className="max-w-md mx-auto">

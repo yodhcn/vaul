@@ -4,7 +4,7 @@ import { clsx } from 'clsx';
 import { useState } from 'react';
 import { Drawer } from 'vaul';
 
-const snapPoints = ['148px', '355px'];
+const snapPoints = ['148px', '355px', 1];
 
 export default function Page() {
   const [snap, setSnap] = useState<number | string | null>(snapPoints[0]);
@@ -14,7 +14,7 @@ export default function Page() {
   return (
     <div className="w-screen h-screen bg-white p-8 flex justify-center items-center">
       <div data-testid="active-snap-index">{activeSnapPointIndex}</div>
-      <Drawer.Root open snapPoints={snapPoints} activeSnapPoint={snap} setActiveSnapPoint={setSnap}>
+      <Drawer.Root modal={false} snapPoints={snapPoints} setActiveSnapPoint={setSnap}>
         <Drawer.Trigger asChild>
           <button data-testid="trigger">Open Drawer</button>
         </Drawer.Trigger>
@@ -24,7 +24,6 @@ export default function Page() {
             data-testid="content"
             className="fixed flex flex-col bg-white border border-gray-200 border-b-none rounded-t-[10px] bottom-0 left-0 right-0 h-full max-h-[97%] mx-[-1px]"
           >
-            <Drawer.Handle data-testid="handle" className="mb-8 mt-2" />
             <div
               className={clsx('flex flex-col max-w-md mx-auto w-full p-4 pt-5', {
                 'overflow-y-auto': snap === 1,
